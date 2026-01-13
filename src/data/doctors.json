@@ -1,0 +1,19 @@
+{
+  "doctors": [
+    { "id": "D001", "name": "Dr. Rajesh Sharma", "specialty": "Cardiology", "status": "Active", "clinic": "City Health Clinic", "patients": 156, "email": "r.sharma@healthcare.com" },
+    { "id": "D002", "name": "Dr. Priya Patel", "specialty": "Pediatrics", "status": "Active", "clinic": "Downtown Medical", "patients": 203, "email": "p.patel@healthcare.com" },
+    { "id": "D003", "name": "Dr. Arun Kumar", "specialty": "Orthopedics", "status": "Active", "clinic": "Wellness Center", "patients": 128, "email": "a.kumar@healthcare.com" },
+    { "id": "D004", "name": "Dr. Sneha Reddy", "specialty": "Dermatology", "status": "Inactive", "clinic": "City Health Clinic", "patients": 89, "email": "s.reddy@healthcare.com" },
+    { "id": "D005", "name": "Dr. Vikram Singh", "specialty": "Neurology", "status": "Active", "clinic": "Senior Care Plus", "patients": 145, "email": "v.singh@healthcare.com" },
+    { "id": "D006", "name": "Dr. Ananya Iyer", "specialty": "Oncology", "status": "Active", "clinic": "Downtown Medical", "patients": 112, "email": "a.iyer@healthcare.com" },
+    { "id": "D007", "name": "Dr. Suresh Menon", "specialty": "General Medicine", "status": "Active", "clinic": "Wellness Center", "patients": 234, "email": "s.menon@healthcare.com" },
+    { "id": "D008", "name": "Dr. Kavita Nair", "specialty": "Psychiatry", "status": "Active", "clinic": "City Health Clinic", "patients": 98, "email": "k.nair@healthcare.com" },
+    { "id": "D009", "name": "Dr. Amit Desai", "specialty": "Radiology", "status": "Inactive", "clinic": "Senior Care Plus", "patients": 67, "email": "a.desai@healthcare.com" },
+    { "id": "D010", "name": "Dr. Deepika Joshi", "specialty": "Endocrinology", "status": "Active", "clinic": "Downtown Medical", "patients": 143, "email": "d.joshi@healthcare.com" },
+    { "id": "D011", "name": "Dr. Rahul Mehta", "specialty": "Gastroenterology", "status": "Active", "clinic": "Wellness Center", "patients": 167, "email": "r.mehta@healthcare.com" },
+    { "id": "D012", "name": "Dr. Pooja Gupta", "specialty": "Rheumatology", "status": "Active", "clinic": "City Health Clinic", "patients": 78, "email": "p.gupta@healthcare.com" },
+    { "id": "D013", "name": "Dr. Karthik Rao", "specialty": "Urology", "status": "Active", "clinic": "Senior Care Plus", "patients": 134, "email": "k.rao@healthcare.com" },
+    { "id": "D014", "name": "Dr. Meera Krishnan", "specialty": "Ophthalmology", "status": "Active", "clinic": "Downtown Medical", "patients": 189, "email": "m.krishnan@healthcare.com" },
+    { "id": "D015", "name": "Dr. Sanjay Verma", "specialty": "Pulmonology", "status": "Inactive", "clinic": "Wellness Center", "patients": 56, "email": "s.verma@healthcare.com" }
+  ]
+}

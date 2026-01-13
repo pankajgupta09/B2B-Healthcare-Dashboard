@@ -1,0 +1,24 @@
+{
+  "patients": [
+    { "id": "P001", "name": "Arjun Malhotra", "age": 45, "gender": "Male", "status": "Active", "clinic": "City Health Clinic", "phone": "+91 98100-10101", "lastVisit": "2026-01-10" },
+    { "id": "P002", "name": "Ishita Banerjee", "age": 32, "gender": "Female", "status": "Active", "clinic": "Downtown Medical", "phone": "+91 98100-10102", "lastVisit": "2026-01-09" },
+    { "id": "P003", "name": "Rohan Chakraborty", "age": 58, "gender": "Male", "status": "Inactive", "clinic": "Wellness Center", "phone": "+91 98100-10103", "lastVisit": "2025-12-15" },
+    { "id": "P004", "name": "Nisha Agarwal", "age": 28, "gender": "Female", "status": "Active", "clinic": "City Health Clinic", "phone": "+91 98100-10104", "lastVisit": "2026-01-12" },
+    { "id": "P005", "name": "Manoj Srinivasan", "age": 67, "gender": "Male", "status": "Active", "clinic": "Senior Care Plus", "phone": "+91 98100-10105", "lastVisit": "2026-01-08" },
+    { "id": "P006", "name": "Divya Kapoor", "age": 41, "gender": "Female", "status": "Active", "clinic": "Downtown Medical", "phone": "+91 98100-10106", "lastVisit": "2026-01-11" },
+    { "id": "P007", "name": "Sunil Pillai", "age": 53, "gender": "Male", "status": "Inactive", "clinic": "Wellness Center", "phone": "+91 98100-10107", "lastVisit": "2025-11-20" },
+    { "id": "P008", "name": "Ritu Saxena", "age": 36, "gender": "Female", "status": "Active", "clinic": "City Health Clinic", "phone": "+91 98100-10108", "lastVisit": "2026-01-13" },
+    { "id": "P009", "name": "Vijay Bhatia", "age": 49, "gender": "Male", "status": "Active", "clinic": "Downtown Medical", "phone": "+91 98100-10109", "lastVisit": "2026-01-07" },
+    { "id": "P010", "name": "Sunita Choudhary", "age": 29, "gender": "Female", "status": "Active", "clinic": "Wellness Center", "phone": "+91 98100-10110", "lastVisit": "2026-01-12" },
+    { "id": "P011", "name": "Ramesh Naidu", "age": 62, "gender": "Male", "status": "Active", "clinic": "Senior Care Plus", "phone": "+91 98100-10111", "lastVisit": "2026-01-06" },
+    { "id": "P012", "name": "Anjali Mishra", "age": 44, "gender": "Female", "status": "Inactive", "clinic": "City Health Clinic", "phone": "+91 98100-10112", "lastVisit": "2025-12-28" },
+    { "id": "P013", "name": "Prasad Hegde", "age": 38, "gender": "Male", "status": "Active", "clinic": "Downtown Medical", "phone": "+91 98100-10113", "lastVisit": "2026-01-10" },
+    { "id": "P014", "name": "Lakshmi Venkatesh", "age": 55, "gender": "Female", "status": "Active", "clinic": "Wellness Center", "phone": "+91 98100-10114", "lastVisit": "2026-01-09" },
+    { "id": "P015", "name": "Nikhil Tiwari", "age": 31, "gender": "Male", "status": "Active", "clinic": "City Health Clinic", "phone": "+91 98100-10115", "lastVisit": "2026-01-11" },
+    { "id": "P016", "name": "Geeta Kulkarni", "age": 47, "gender": "Female", "status": "Inactive", "clinic": "Senior Care Plus", "phone": "+91 98100-10116", "lastVisit": "2025-12-05" },
+    { "id": "P017", "name": "Harish Pandit", "age": 59, "gender": "Male", "status": "Active", "clinic": "Downtown Medical", "phone": "+91 98100-10117", "lastVisit": "2026-01-08" },
+    { "id": "P018", "name": "Swati Deshpande", "age": 33, "gender": "Female", "status": "Active", "clinic": "Wellness Center", "phone": "+91 98100-10118", "lastVisit": "2026-01-13" },
+    { "id": "P019", "name": "Ashok Mathur", "age": 42, "gender": "Male", "status": "Active", "clinic": "City Health Clinic", "phone": "+91 98100-10119", "lastVisit": "2026-01-07" },
+    { "id": "P020", "name": "Pallavi Bhatt", "age": 26, "gender": "Female", "status": "Active", "clinic": "Downtown Medical", "phone": "+91 98100-10120", "lastVisit": "2026-01-12" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "stats": {
+    "patients": 1240,
+    "doctors": 85,
+    "appointments": 320,
+    "clinics": 12
+  },
+  "recentActivity": [
+    { "id": 1, "type": "appointment", "message": "New appointment scheduled with Dr. Smith", "time": "2 min ago" },
+    { "id": 2, "type": "patient", "message": "New patient registration: John Doe", "time": "15 min ago" },
+    { "id": 3, "type": "doctor", "message": "Dr. Emily Brown updated availability", "time": "1 hour ago" },
+    { "id": 4, "type": "clinic", "message": "City Health Clinic added new department", "time": "3 hours ago" }
+  ]
+}
