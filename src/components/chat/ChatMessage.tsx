@@ -9,35 +9,54 @@ interface ChatMessageProps {
     timestamp: string;
 }
 
+// Parse bold text (**text** -> <strong>text</strong>)
+const parseBold = (text: string): string => {
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>');
+};
+
 export function ChatMessage({ role, content, timestamp }: ChatMessageProps) {
     const isAssistant = role === 'assistant';
 
     // Parse markdown-like formatting
     const formatContent = (text: string) => {
         return text.split('\n').map((line, index) => {
+            // Parse bold for all lines first
+            const parsedLine = parseBold(line);
+
             // Handle bullet points
             if (line.startsWith('• ') || line.startsWith('- ')) {
+                const bulletContent = parseBold(line.slice(2));
                 return (
-                    <li key={index} className="ml-4 list-disc">
-                        {line.slice(2)}
-                    </li>
+                    <li
+                        key={index}
+                        className="ml-4 list-disc"
+                        dangerouslySetInnerHTML={{ __html: bulletContent }}
+                    />
                 );
             }
+
             // Handle numbered lists
             if (/^\d+\.\s/.test(line)) {
+                const listContent = parseBold(line.replace(/^\d+\.\s/, ''));
                 return (
-                    <li key={index} className="ml-4 list-decimal">
-                        {line.replace(/^\d+\.\s/, '')}
-                    </li>
+                    <li
+                        key={index}
+                        className="ml-4 list-decimal"
+                        dangerouslySetInnerHTML={{ __html: listContent }}
+                    />
                 );
             }
-            // Handle bold text
-            const boldParsed = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+            // Empty lines
+            if (line === '') {
+                return <div key={index} className="h-2" />;
+            }
+
+            // Regular paragraphs with bold
             return (
                 <p
                     key={index}
-                    className={line === '' ? 'h-2' : ''}
-                    dangerouslySetInnerHTML={{ __html: boldParsed }}
+                    dangerouslySetInnerHTML={{ __html: parsedLine }}
                 />
             );
         });

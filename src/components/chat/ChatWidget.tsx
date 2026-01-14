@@ -218,7 +218,7 @@ export function ChatWidget() {
                                     </Button>
                                 </div>
                                 <p className="text-[10px] text-center text-muted-foreground mt-2">
-                                    Powered by Gemini AI • For demo purposes only
+                                    AI Assistant • For demo purposes only
                                 </p>
                             </div>
                         </div>
