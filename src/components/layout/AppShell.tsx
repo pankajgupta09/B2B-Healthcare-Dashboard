@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { AppSidebar } from './AppSidebar';
 import { Header } from './Header';
 import { useAppSelector } from '@/app/hooks';
+import { ChatWidget } from '@/components/chat/ChatWidget';
 
 interface AppShellProps {
   children: ReactNode;
@@ -29,10 +30,10 @@ export function AppShell({ children }: AppShellProps) {
   return (
     <div className="min-h-screen bg-background">
       <AppSidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
-      
+
       <div className={isMobile ? '' : undefined}>
         <Header sidebarOpen={!isMobile && sidebarOpen} />
-        
+
         <motion.main
           className="p-6"
           style={{
@@ -43,6 +44,10 @@ export function AppShell({ children }: AppShellProps) {
           {children}
         </motion.main>
       </div>
+
+      {/* AI Chat Widget */}
+      <ChatWidget />
     </div>
   );
 }
+

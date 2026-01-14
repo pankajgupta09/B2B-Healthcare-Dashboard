@@ -4,6 +4,7 @@ import dashboardReducer from '@/features/dashboard/dashboardSlice';
 import directoryReducer from '@/features/directory/directorySlice';
 import appointmentsReducer from '@/features/appointments/appointmentsSlice';
 import themeReducer from '@/features/theme/themeSlice';
+import chatReducer from '@/features/chat/chatSlice';
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     directory: directoryReducer,
     appointments: appointmentsReducer,
     theme: themeReducer,
+    chat: chatReducer,
   },
 });
 
