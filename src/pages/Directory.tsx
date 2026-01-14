@@ -72,18 +72,18 @@ export default function Directory() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
         >
           <div>
-            <h1 className="text-2xl font-bold text-foreground flex items-center gap-2">
-              <Users className="h-6 w-6 text-primary" />
+            <h1 className="text-xl md:text-2xl font-bold text-foreground flex items-center gap-2">
+              <Users className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               Patient Directory
             </h1>
-            <p className="text-muted-foreground mt-1">
-              Manage and view all registered patients
+            <p className="text-sm md:text-base text-muted-foreground mt-1">
+              Manage and view all patients
             </p>
           </div>
-          <Badge variant="secondary" className="w-fit">
+          <Badge variant="secondary" className="w-fit text-xs md:text-sm">
             {filteredPatients.length} patients
           </Badge>
         </motion.div>

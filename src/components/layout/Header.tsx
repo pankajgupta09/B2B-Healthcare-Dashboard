@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { LogOut, User } from 'lucide-react';
+import { LogOut, User, Menu } from 'lucide-react';
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
 import { logout } from '@/features/auth/authSlice';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
@@ -16,9 +16,11 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 interface HeaderProps {
   sidebarOpen: boolean;
+  onMenuClick?: () => void;
+  isMobile?: boolean;
 }
 
-export function Header({ sidebarOpen }: HeaderProps) {
+export function Header({ sidebarOpen, onMenuClick, isMobile }: HeaderProps) {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { user } = useAppSelector((state) => state.auth);
@@ -39,31 +41,37 @@ export function Header({ sidebarOpen }: HeaderProps) {
 
   return (
     <header
-      className="sticky top-0 z-20 flex h-16 items-center justify-between border-b border-border bg-background/95 backdrop-blur-sm px-6"
+      className="sticky top-0 z-20 flex h-14 md:h-16 items-center justify-between border-b border-border bg-background/95 backdrop-blur-sm px-3 md:px-6"
       style={{
-        marginLeft: sidebarOpen ? 260 : 72,
-        width: `calc(100% - ${sidebarOpen ? 260 : 72}px)`,
+        marginLeft: isMobile ? 0 : sidebarOpen ? 260 : 72,
+        width: isMobile ? '100%' : `calc(100% - ${sidebarOpen ? 260 : 72}px)`,
         transition: 'margin-left 0.2s ease-in-out, width 0.2s ease-in-out',
       }}
     >
-      <div className="flex items-center gap-4">
-        <h1 className="text-lg font-semibold text-foreground md:block hidden">
-          Healthcare Admin Dashboard
+      <div className="flex items-center gap-2 md:gap-4">
+        {/* Mobile menu button */}
+        {isMobile && onMenuClick && (
+          <Button variant="ghost" size="icon" onClick={onMenuClick} className="h-9 w-9">
+            <Menu className="h-5 w-5" />
+          </Button>
+        )}
+        <h1 className="hidden md:block text-lg font-semibold text-foreground">
+          Healthcare Admin
         </h1>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 md:gap-3">
         <ThemeToggle />
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="flex items-center gap-2 pl-2 pr-3 h-10">
-              <Avatar className="h-8 w-8">
-                <AvatarFallback className="bg-primary text-primary-foreground text-sm">
+            <Button variant="ghost" className="flex items-center gap-1 md:gap-2 px-1 md:pl-2 md:pr-3 h-9 md:h-10">
+              <Avatar className="h-7 w-7 md:h-8 md:w-8">
+                <AvatarFallback className="bg-primary text-primary-foreground text-xs md:text-sm">
                   {user?.name ? getInitials(user.name) : 'U'}
                 </AvatarFallback>
               </Avatar>
-              <span className="hidden sm:block text-sm font-medium">
+              <span className="hidden md:block text-sm font-medium">
                 {user?.name || 'User'}
               </span>
             </Button>

@@ -46,26 +46,26 @@ export default function Dashboard() {
           animate={{ opacity: 1, y: 0 }}
           className="space-y-1"
         >
-          <h1 className="text-2xl font-bold text-foreground">Dashboard Overview</h1>
-          <p className="text-muted-foreground">Welcome back! Here's what's happening today.</p>
+          <h1 className="text-xl md:text-2xl font-bold text-foreground">Dashboard</h1>
+          <p className="text-sm md:text-base text-muted-foreground">Welcome back! Here's what's happening today.</p>
         </motion.div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {isLoading
             ? Array(4)
-                .fill(0)
-                .map((_, i) => <StatCardSkeleton key={i} />)
+              .fill(0)
+              .map((_, i) => <StatCardSkeleton key={i} />)
             : statCards.map((stat, index) => (
-                <StatCard
-                  key={stat.title}
-                  title={stat.title}
-                  value={stat.value}
-                  icon={stat.icon}
-                  color={stat.color}
-                  delay={index * 0.1}
-                />
-              ))}
+              <StatCard
+                key={stat.title}
+                title={stat.title}
+                value={stat.value}
+                icon={stat.icon}
+                color={stat.color}
+                delay={index * 0.1}
+              />
+            ))}
         </div>
 
         {/* Recent Activity */}

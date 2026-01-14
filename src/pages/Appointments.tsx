@@ -83,23 +83,23 @@ export default function Appointments() {
 
   return (
     <AppShell>
-      <div className="p-6 max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6"
+          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 md:mb-6"
         >
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold text-foreground">Appointments</h1>
-            <p className="text-muted-foreground mt-1">
-              Manage and schedule patient appointments
+            <h1 className="text-xl md:text-2xl font-bold text-foreground">Appointments</h1>
+            <p className="text-sm md:text-base text-muted-foreground mt-1">
+              Manage patient appointments
             </p>
           </div>
 
-          <Button onClick={() => setBookingOpen(true)} className="shrink-0">
-            <Plus className="h-4 w-4 mr-2" />
-            Book Appointment
+          <Button onClick={() => setBookingOpen(true)} size="sm" className="shrink-0 w-fit">
+            <Plus className="h-4 w-4 mr-1 md:mr-2" />
+            <span className="text-sm">Book Appointment</span>
           </Button>
         </motion.div>
 

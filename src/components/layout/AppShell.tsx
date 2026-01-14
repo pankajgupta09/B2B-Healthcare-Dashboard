@@ -20,22 +20,35 @@ export function AppShell({ children }: AppShellProps) {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      // Auto-close sidebar on mobile
+      if (mobile) {
+        setSidebarOpen(false);
+      }
     };
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  const handleMenuClick = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <AppSidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
+      <AppSidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} isMobile={isMobile} />
 
-      <div className={isMobile ? '' : undefined}>
-        <Header sidebarOpen={!isMobile && sidebarOpen} />
+      <div>
+        <Header
+          sidebarOpen={!isMobile && sidebarOpen}
+          onMenuClick={handleMenuClick}
+          isMobile={isMobile}
+        />
 
         <motion.main
-          className="p-6"
+          className="p-3 md:p-6 pb-20 md:pb-6"
           style={{
             marginLeft: isMobile ? 0 : sidebarOpen ? 260 : 72,
             transition: 'margin-left 0.2s ease-in-out',
@@ -50,4 +63,3 @@ export function AppShell({ children }: AppShellProps) {
     </div>
   );
 }
-
