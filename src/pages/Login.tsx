@@ -13,16 +13,11 @@ export default function Login() {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { isAuthenticated, isLoading, error } = useAppSelector((state) => state.auth);
-  const { theme } = useAppSelector((state) => state.theme);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({ email: '', password: '' });
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-  }, [theme]);
 
   useEffect(() => {
     if (isAuthenticated) {
