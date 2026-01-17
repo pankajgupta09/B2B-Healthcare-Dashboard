@@ -181,29 +181,23 @@ src/
 
 ### Installation
 
-1. **Clone the repository**
-```bash
-git clone <repository-url>
-cd healthcare-admin-dashboard
-```
-
-2. **Install dependencies**
+1. **Install dependencies**
 ```bash
 npm install
 ```
 
-3. **Set up environment variables** (for AI Chat)
+2. **Set up environment variables** (for AI Chat)
 ```bash
 # Create .env file
 VITE_GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
-4. **Start the development server**
+3. **Start the development server**
 ```bash
 npm run dev
 ```
 
-5. Open http://localhost:8080 in your browser
+4. Open http://localhost:8080 in your browser
 
 ---
 
@@ -273,7 +267,3 @@ This project is configured for easy deployment on:
 MIT License
 
 ---
-
-## 👨‍💻 Author
-
-Built with ❤️ for Healthcare Admin Management
